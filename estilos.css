@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(to bottom, #fedeb1, #ffffff); /* Gradiente de #f1b157 a blanco */
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    width: 1177px;
+    margin:0 auto;
+    padding: 20px;
+    background-color: #fff;
+
+      
+}
+
+.container.box-center {
+    border:1px solid #ccc;
+    border-radius:12px
+
+}
+
+.container.box-shadow {
+    box-shadow: rgb(196,225,241) 0 10px 25px 0;
+}
+
+/* font */
+
+:root {
+    --font-size16: 16px;
+    --font-weight-primary: 600;
+    --font-family-primary: "Inter", sans-serif;
+    --font-optical-sizing: auto;
+    --font-style: normal;
+    --font-variation-settings:
+      "slnt" 0;
+  
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+/* layouts */
+
+header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+
+
+
+/* ================ app ====== content  =========================================== */
+
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.char {
+    background-color: #ccc;
+    color: #444;
+    padding: 6px;
+    margin-right: 1px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    font-family: var(--font-family-primary);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.content-sms {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-sms-writer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;   
+}
+
+h1.main-title {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-primary);
+    font-size: 24px;
+}
+
+/*  sms writer */
+
+.input-text-sms {
+    width: 100%;
+    min-height: 170px;
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius:14px;
+    outline: none;
+    font-family: var(--font-family-primary);
+    font-weight:400;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.input-text-sms:focus {
+    background-color: #fffaf4;
+}
+
+/*  fin sms writer */
+
+.content-sms-info {
+   width: 35%;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 8px;
+   padding:0px 0 0 0;
+   font-family: var(--font-family-primary);
+}
+
+/* grid sms info  */
+
+.grid-container-sms-info {
+    display: grid;
+    background-color:#ebf7ff;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    grid-template-rows: repeat(4, auto); /* 4 filas que ajustan su altura automáticamente */
+    padding: 0px 0px;
+    border-collapse: collapse;
+    border-radius: 6px;
+  
+}
+
+.grid-item {
+    padding: 14px 6px 14px 6px;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 22px;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 600;
+    border:1px solid rgba(45, 153, 216, 0.5);
+    border-width: 0 0px 1px 0; /* Borde inferior y derecho */
+  }
+
+   /* Remover el borde inferior del último elemento de cada columna */
+   .grid-item:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+
+  /* Remover el borde derecho de los elementos de la última columna */
+  .grid-item:nth-child(2n) {
+    border-right: 0;
+  }

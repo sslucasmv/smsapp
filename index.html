@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script defer src="main.js"></script>
+    <title>Mostrar input en div</title>
+    
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <div class="container-fluid">
+        <div class="container box-center box-shadow">
+    <h1 class="main-title">Insertar Contenido del Mensaje</h1>
+    <div class="content-sms">
+        <div class="content-sms-writer">
+            <textarea type="textarea" id="miInput" class="input-text-sms" placeholder="Escribe algo..."></textarea>
+        </div>
+        <div class="content-sms-info">
+            <div class="grid-container-sms-info">
+                <div class="grid-item">Codificación:</div>
+                <div class="grid-item">7bit</div>
+                <div class="grid-item">SMS Partes</div>
+                <div class="grid-item">1</div>
+                <div class="grid-item">Caracteres usados</div>
+                <div class="grid-item"><div id="contador">0</div></div>
+                <div class="grid-item">Caracteres máximos</div>
+                <div class="grid-item">160</div>
+            </div> 
+        </div>
+       
+    </div><!-- content-sms -->
+           
+    <h1 class="main-title">Detalle del SMS</h1>
+    <div id="miDiv" class="content"></div>
+    </div><!-- container -->
+</div><!-- container fluid -->
+
+</body>
+</html>
