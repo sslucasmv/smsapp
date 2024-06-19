@@ -17,23 +17,26 @@ body {
 
   */
 
-  @media (500px >= width) {
+  @media (320px <= width <= 600px ){
 
-    h1.main-title {
-        color: red !important;
-        margin-bottom: 20px;
+    header {
+        height: 100px !important;
     }
-
+    
+    h1.main-title {
+        margin-bottom: 15px !important;
+        font-size: 20px !important;
+    }
 
     .content-sms {
         width: 94% !important;
         flex-direction: column !important; 
     }
 
-
     .content-sms-writer , .content-sms-info {
         width: 100% !important;
-        padding: 0 !important;       
+        padding: 0 !important; 
+        margin:0 auto !important;      
     }
 
     .container {
@@ -44,8 +47,26 @@ body {
     min-height: 80px !important;
   }
 
+  .grid-item {
+    padding: 4px 0 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
 }
 
+
+
+@media (769px <= width <= 940px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (941px <= width) {
+    .container {
+        width: 1177px !important;
+    }
+}
 
 
 
@@ -114,7 +135,7 @@ header {
 }
 
 .char {
-    background-color: #ccc;
+    background-color: #ebebeb;
     color: #444;
     padding: 6px;
     margin-right: 1px;
@@ -148,6 +169,7 @@ h1.main-title {
     font-weight: var(--font-weight-primary);
     font-size: 24px;
     color: #444;
+    margin-bottom: 15px;
 }
 
 hr {
