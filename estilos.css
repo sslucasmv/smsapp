@@ -155,7 +155,7 @@ header {
     width: 100%;
     background-color: #fdfdfd; /* Color que cambia al hacer scroll */
     z-index: 1000;
-    box-shadow: rgba(0,0,0,25) 0px 4px 8px 0;
+    box-shadow: rgba(0,0,0,0.4) 0px 4px 8px 0; /* Sombra más transparente y menos extensa */
 }
 
 footer {
