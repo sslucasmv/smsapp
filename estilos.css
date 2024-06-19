@@ -1,3 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+  /* MEDIAS QUERIES */
+  /* medidas 
+
+  smarthphone 320 - 480
+  Tablet - 768 - 1024
+  Desktops - 1024 > 1680
+
+  */
+
+  @media (400px <= width <= 520px) {
+
+    h1.main-title {
+        color: red !important;
+        margin-bottom: 20px;
+    }
+
+
+    .content-sms {
+        width: 94% !important;
+        flex-direction: column !important; 
+    }
+
+
+    .content-sms-writer , .content-sms-info {
+        width: 100% !important;
+        padding: 0 !important;       
+    }
+
+    .container {
+        width: 90% !important;
+    }
+
+    .input-text-sms {
+    min-height: 80px !important;
+  }
+
+}
+
+
 body {
     background: linear-gradient(to bottom, #fedeb1, #ffffff); /* Gradiente de #f1b157 a blanco */
     background-repeat: no-repeat;
@@ -11,9 +60,7 @@ body {
     width: 1177px;
     margin:0 auto;
     padding: 20px;
-    background-color: #fff;
-
-      
+    background-color: #fff;   
 }
 
 .container.box-center {
@@ -36,7 +83,6 @@ body {
     --font-style: normal;
     --font-variation-settings:
       "slnt" 0;
-  
 }
 
 .inter {
@@ -56,11 +102,7 @@ header {
     display: flex;
 }
 
-
-
-
 /* ================ app ====== content  =========================================== */
-
 
 .content {
     display: flex;
@@ -68,6 +110,7 @@ header {
     flex-wrap: wrap;
     gap: 2px;
 }
+
 .char {
     background-color: #ccc;
     color: #444;
@@ -113,10 +156,6 @@ hr {
 .text-default {
     font-family: var(--font-family-primary);
     font-size: 16px;
-}
-
-.pt10 {
- 
 }
 
 /*  sms writer */
