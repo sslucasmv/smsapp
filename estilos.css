@@ -64,10 +64,19 @@ body {
 
 @media (1021px <= width) {
     .container {
+        width: 1020px !important;
+    }
+}
+
+@media (1177px <= width) {
+    .container {
         width: 1177px !important;
     }
 }
 
+.pt-15 {
+    padding-top: 15px;
+}
 
 
 body {
@@ -123,6 +132,17 @@ header {
     width: 100%;
     height: 300px;
     display: flex;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.section-divider {
+    padding-top:30px;
+    padding-bottom: 30px;
 }
 
 /* ================ app ====== content  =========================================== */
@@ -247,3 +267,69 @@ hr {
   .grid-item:nth-child(2n) {
     border-right: 0;
   }
+
+/*  content info leyenda */
+
+.content-info {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.list-info {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-info li {
+    font-size: 16px;
+    font-family: var(--font-family-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+span.box-char {
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    font-size: 15px;
+    padding: 7px 6px 6px 5px;
+    border-radius:4px ;
+    text-align:center !important;
+    color:#444;
+  
+}
+
+span.text-box {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.bg-default {
+background-color: #ebebeb;
+}
+
+.bg-yellow {
+    background-color:#ffeca7;
+}
+
+.bg-sky {
+    background-color:#a9d9fc;
+}
+
+.bg-greenLight {
+    background-color:#85b13e;
+}
+
+.bg-green {
+    background-color:#5f7d2d;
+}
+
+
+
+
+
+
