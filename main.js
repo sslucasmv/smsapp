@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const specialChars = '|^€{}[]~\\';
 
+
     input.addEventListener('input', function() {
         // Limpiar el contenedor
         container.innerHTML = '';
@@ -23,6 +24,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Inicializar el contador de caracteres reales
         let actualCharCount = 0;
+
+        // anadir 
+
+      // scripts.js
 
         // Crear un nuevo div o span por cada carácter
         for (let i = 0; i < value.length; i++) {
@@ -67,4 +72,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         contador.textContent = actualCharCount;
         partesMensaje.textContent = messageCount;
     });
+
+    // Funcionalidad del sticky header
+    const header = document.getElementById('header');
+    const sticky = header.offsetTop;
+
+    function checkSticky() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    }
+
+    window.onscroll = function() {
+        checkSticky();
+    };
+
+
 });

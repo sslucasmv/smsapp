@@ -133,17 +133,39 @@ body {
   }
 
 /* layouts */
+/* estilos.css */
 
+/* Estilos generales para el header */
 header {
+   
+    color: white;
+    padding: 10px 0;
+    text-align: center;
     width: 100%;
-    height: 300px;
-    display: flex;
+    height: 60px;
+    transition: background-color 0.3s;
+    opacity: 1;
+}
+
+/* Estilos sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fdfdfd; /* Color que cambia al hacer scroll */
+    z-index: 1000;
+    box-shadow: rgba(0,0,0,25) 0px 4px 8px 0;
 }
 
 footer {
     width: 100%;
     height: 200px;
     display: flex;
+}
+
+.main-wrapper {
+    margin-top: 200px !important;
 }
 
 .section-divider {
@@ -177,7 +199,7 @@ footer {
 .esc-text {
     background-color:#ffeca7;
     color: #444;
-    padding: 6px 2px;
+    padding: 8px 2px;
     margin-right: 1px;
     height: 20px;
     width: 30px;
@@ -189,7 +211,9 @@ footer {
 }
 
 
-
+.mt-20 {
+    margin-top: 20px;
+}
 .content-sms {
     width: 100%;
     display: flex;
