@@ -17,7 +17,7 @@ body {
 
   */
 
-  @media (400px <= width <= 520px) {
+  @media (320px <= width <= 520px) {
 
     h1.main-title {
         color: red !important;
