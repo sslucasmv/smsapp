@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const partesMensaje = document.getElementById('partesMensaje');
     const mensajeDefault = document.getElementById('mensajeDefault');
 
-    const specialChars = '|^€{}[]~';
+    const specialChars = '|^€{}[]~\\';
 
     input.addEventListener('input', function() {
         // Limpiar el contenedor

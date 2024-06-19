@@ -52,14 +52,17 @@ body {
     font-size: 14px !important;
     font-weight: 400 !important;
   }
+
+  
+
 }
-
-
 
 @media (769px <= width <= 1020px) {
     .container {
         width: 90%;
     }
+
+   
 }
 
 @media (1021px <= width) {
@@ -160,7 +163,7 @@ footer {
 .char  {
     background-color: #ebebeb;
     color: #444;
-    padding: 6px;
+    padding:8px 6px;
     margin-right: 1px;
     height: 20px;
     width: 20px;
@@ -306,16 +309,17 @@ hr {
     font-family: var(--font-family-primary);
     margin-bottom: 16px;
     display: flex;
+    flex-direction: row;
     align-items: center;
 
 }
 
 span.box-char {
     display: inline-block;
-    width: 22px;
+    min-width: 22px !important;
     height: 20px;
-    font-size: 15px;
-    padding: 7px 6px 6px 5px;
+    font-size: 14px;
+    padding:8px 6px;
     border-radius:4px ;
     text-align:center !important;
     color:#444;
@@ -323,7 +327,6 @@ span.box-char {
 }
 
 span.text-box {
-    display: inline-block;
     margin-left: 20px;
 }
 
