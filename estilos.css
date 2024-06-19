@@ -80,7 +80,8 @@ body {
 
 
 body {
-    background: linear-gradient(to bottom, #fedeb1, #ffffff); /* Gradiente de #f1b157 a blanco */
+    /*background: linear-gradient(to bottom, #d2e2da, #ffffff); /* Gradiente de #f1b157 a blanco */
+    background: linear-gradient(180deg, rgba(29,71,107,1) 0%, rgba(91,189,172,1) 25%, rgba(255,255,255,0) 100%);
     background-repeat: no-repeat;
 }
 
