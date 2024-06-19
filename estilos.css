@@ -80,8 +80,10 @@ body {
 
 
 body {
+    background: linear-gradient(180deg, rgba(107,201,204,1) 11%, rgba(252,200,246,1) 39%, rgba(255,255,255,0) 100%);
     /*background: linear-gradient(to bottom, #d2e2da, #ffffff); /* Gradiente de #f1b157 a blanco */
-    background: linear-gradient(180deg, rgba(29,71,107,1) 0%, rgba(91,189,172,1) 25%, rgba(255,255,255,0) 100%);
+    /*background: linear-gradient(180deg, rgba(235,135,223,1) 0%, rgba(129,219,222,1) 25%, rgba(255,255,255,0) 100%);*/
+    /*background: linear-gradient(180deg, rgba(29,71,107,1) 0%, rgba(91,189,172,1) 25%, rgba(255,255,255,0) 100%);*/
     background-repeat: no-repeat;
 }
 
@@ -155,7 +157,7 @@ footer {
     gap: 2px;
 }
 
-.char {
+.char  {
     background-color: #ebebeb;
     color: #444;
     padding: 6px;
@@ -164,11 +166,26 @@ footer {
     width: 20px;
     border-radius: 4px;
     font-family: var(--font-family-primary);
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
-
 }
+
+.esc-text {
+    background-color:#ffeca7;
+    color: #444;
+    padding: 6px 2px;
+    margin-right: 1px;
+    height: 20px;
+    width: 30px;
+    border-radius: 4px;
+    font-family: var(--font-family-primary);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 
 .content-sms {
     width: 100%;
@@ -220,7 +237,8 @@ hr {
 }
 
 .input-text-sms:focus {
-    background-color: #fffaf4;
+    background-color: #f5fffa/*fffaf4;*/
+    
 }
 
 /*  fin sms writer */
@@ -231,7 +249,7 @@ hr {
    border-top-right-radius: 8px;
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 8px;
-   padding:0px 0 0 0;
+   padding:0px 0 0 0; 
    font-family: var(--font-family-primary);
 }
 
