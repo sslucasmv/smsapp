@@ -23,7 +23,7 @@ body {
         height: 100px !important;
     }
     
-    h1.main-title {
+    h2.main-title {
         margin-bottom: 15px !important;
         font-size: 20px !important;
     }
@@ -39,7 +39,7 @@ body {
         margin:0 auto !important;      
     }
 
-    .container {
+    .container-center {
         width: 90% !important;
     }
 
@@ -53,65 +53,28 @@ body {
     font-weight: 400 !important;
   }
 
-  
-
 }
 
 @media (769px <= width <= 1020px) {
-    .container {
+    .container-center {
         width: 90%;
-    }
-
-   
+    } 
 }
 
 @media (1021px <= width) {
-    .container {
-        width: 1020px !important;
+    .container-center {
+        width:940px !important;
     }
 }
 
 @media (1177px <= width) {
-    .container {
+    .container-center {
         width: 1177px !important;
     }
 }
 
-.pt-15 {
-    padding-top: 15px;
-}
+/*   variables */
 
-
-body {
-    background: linear-gradient(180deg, rgba(107,201,204,1) 11%, rgba(252,200,246,1) 39%, rgba(255,255,255,0) 100%);
-    /*background: linear-gradient(to bottom, #d2e2da, #ffffff); /* Gradiente de #f1b157 a blanco */
-    /*background: linear-gradient(180deg, rgba(235,135,223,1) 0%, rgba(129,219,222,1) 25%, rgba(255,255,255,0) 100%);*/
-    /*background: linear-gradient(180deg, rgba(29,71,107,1) 0%, rgba(91,189,172,1) 25%, rgba(255,255,255,0) 100%);*/
-    background-repeat: no-repeat;
-}
-
-.container-fluid {
-    width: 100%;
-}
-
-.container {
-    /*width: 1177px;*/
-    margin:0 auto;
-    padding: 20px;
-    background-color: #fff;   
-}
-
-.container.box-center {
-    border:1px solid #ccc;
-    border-radius:12px
-
-}
-
-.container.box-shadow {
-    box-shadow: rgb(196,225,241) 0 10px 25px 0;
-}
-
-/* font */
 
 :root {
     --font-size16: 16px;
@@ -119,9 +82,54 @@ body {
     --font-family-primary: "Inter", sans-serif;
     --font-optical-sizing: auto;
     --font-style: normal;
-    --font-variation-settings:
-      "slnt" 0;
+    --font-variation-settings:"slnt" 0;
+    --bg-white:#fff;
+    --bg-color-gradientes-primary: linear-gradient(180deg, rgba(107, 201, 204, 1) 11%, rgba(252, 200, 246, 1) 39%, rgba(255, 255, 255, 0) 100%);
+    --bg-color-gradientes-secondary: linear-gradient(to bottom, #d2e2da, #ffffff);
+    --bg-color-gradientes-tertiary: linear-gradient(180deg, rgba(235, 135, 223, 1) 0%, rgba(129, 219, 222, 1) 25%, rgba(255, 255, 255, 0) 100%);
+    --bg-color-gradientes-cuarto: linear-gradient(180deg, rgba(29, 71, 107, 1) 0%, rgba(91, 189, 172, 1) 25%, rgba(255, 255, 255, 0) 100%);
+    --bg-color-gradientes-quinto:linear-gradient(180deg, rgba(245,226,219,1) 7%, rgba(240,223,246,1) 21%, rgba(255,255,255,1) 100%);
+    --bg-color-gradientes-sexto: linear-gradient(180deg, rgba(168,218,233,1) 7%, rgba(247,239,192,1) 21%, rgba(246,211,244,1) 100%);
 }
+
+
+/*  --- --- --- --- */
+
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.bg-white {
+    background-color: var(--bg-white);
+}
+
+
+body {
+   
+    background:var(--bg-color-gradientes-sexto)
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container-center {
+    /*width: 1177px;*/
+    margin:0 auto;
+    padding: 20px;
+}
+
+.container-center.box-center {
+    border:1px solid #ccc;
+    border-radius:12px;
+}
+
+.container-center.box-shadow {
+    box-shadow: rgb(196,225,241) 0 10px 25px 0;
+}
+
+/* font */
 
 .inter {
     font-family: "Inter", sans-serif;
@@ -130,21 +138,18 @@ body {
     font-style: normal;
     font-variation-settings:
       "slnt" 0;
-  }
+}
 
 /* layouts */
 /* estilos.css */
 
 /* Estilos generales para el header */
 header {
-   
-    color: white;
-    padding: 10px 0;
+    color:#444;
     text-align: center;
     width: 100%;
-    height: 60px;
-    transition: background-color 0.3s;
-    opacity: 1;
+    height: auto;
+    transition: background-color 0.3s;  
 }
 
 /* Estilos sticky */
@@ -153,9 +158,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    color: #444;
     background-color: #fdfdfd; /* Color que cambia al hacer scroll */
     z-index: 1000;
-    box-shadow: rgba(0,0,0,0.4) 0px 4px 8px 0; /* Sombra más transparente y menos extensa */
+    box-shadow: rgba(0,0,0,0.1) 0px 2px 4px 0; /* Sombra más transparente y menos extensa */
 }
 
 footer {
@@ -171,6 +177,82 @@ footer {
 .section-divider {
     padding-top:30px;
     padding-bottom: 30px;
+}
+
+/* ===== ======header elements ======== ====== */
+
+
+.content-nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav.navbar ul li {
+    list-style: none;
+    font-family: var(--font-family-primary);
+    margin-left: 10px;
+}
+
+/* button demo  */
+
+.btn-demo {
+	background-color:#44c767;
+	border-radius:30px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:12px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    box-shadow: 0px 7px 3px -7px #285520;;
+   
+}
+.btn-demo:hover {
+	background-color:#5cbf2a;
+}
+.btn-demo:active {
+	position:relative;
+	top:1px;
+}
+
+
+.logo-content {
+   
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo-nav img {
+    width: 80px;
+    height: 60px;
+}
+
+.logo-text {
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 10px;
+
 }
 
 /* ================ app ====== content  =========================================== */
@@ -210,17 +292,16 @@ footer {
     margin-bottom: 10px;
 }
 
-
 .mt-20 {
     margin-top: 20px;
 }
+
 .content-sms {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
-   
+    margin-bottom: 20px; 
 }
 
 .content-sms-writer {
@@ -229,7 +310,7 @@ footer {
     flex-direction: column;   
 }
 
-h1.main-title {
+h2.main-title {
     font-family: var(--font-family-primary);
     font-weight: var(--font-weight-primary);
     font-size: 24px;
@@ -335,7 +416,6 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 span.box-char {
@@ -346,8 +426,7 @@ span.box-char {
     padding:8px 6px;
     border-radius:4px ;
     text-align:center !important;
-    color:#444;
-  
+    color:#444; 
 }
 
 span.text-box {
