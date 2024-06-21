@@ -186,15 +186,35 @@ section.center-text {
     padding-top: 60px;
 }
 
-section.center-text h1 {
+h1 {
     font-family: var(--font-family-primary);
-    font-size: 34px;
-    text-align: center;
+    font-size: 36px;
 }
+
+.linear-wipe {
+    text-align: center;
+    background: linear-gradient(to right, hsl(188, 66%, 44%) 20%, #bc0cf1 40%, #f47878 60%, steelblue 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 100% center;
+    }
+}
+
 
 section.center-text p {
     text-align: center;
     font-family: var(--font-family-primary);
+    color: #555;
+    font-weight: 500;
     font-size: 24px;
     margin-top: 30px;
 }
@@ -403,7 +423,7 @@ hr {
 
 .grid-container-sms-info {
     display: grid;
-    background-color:#ebf7ff;
+    background-color:#e2eef7;/*#ebf7ff;*/
     grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
     grid-template-rows: repeat(4, auto); /* 4 filas que ajustan su altura automáticamente */
     padding: 0px 0px;
