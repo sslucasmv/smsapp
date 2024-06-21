@@ -4,14 +4,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const contador = document.getElementById('contador');
     const partesMensaje = document.getElementById('partesMensaje');
     const mensajeDefault = document.getElementById('mensajeDefault');
+    const codificacion = document.getElementById('codificacion');
+    const caracteresMaximos = document.getElementById('caracteresMaximos');
 
     const specialChars = '|^€{}[]~\\';
-
+    const unicodeChars = 'áíóúÁÍÓÚ`';
 
     input.addEventListener('input', function() {
         // Limpiar el contenedor
         container.innerHTML = '';
-        
+
         // Obtener el valor del textarea
         const value = input.value;
 
@@ -24,70 +26,75 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Inicializar el contador de caracteres reales
         let actualCharCount = 0;
-
-        // anadir 
-
-      // scripts.js
+        let isUnicode = false;
 
         // Crear un nuevo div o span por cada carácter
         for (let i = 0; i < value.length; i++) {
             const charElement = document.createElement('span');
-            charElement.className = 'char';
-            charElement.textContent = value[i];
+            charElement.classList.add('char');
 
-            // Si el carácter es uno de los especiales, agregar el "Esc"
-            if (specialChars.includes(value[i])) {
-                // Crear el elemento "Esc"
-                const escElement = document.createElement('div');
-                escElement.className = 'esc-text';
-                escElement.textContent = 'Esc';
-                
-                // Crear un contenedor para el carácter especial y el texto "Esc"
-                const specialContainer = document.createElement('div');
-                specialContainer.style.display = 'flex';
-                specialContainer.style.alignItems = 'center';
-                
-                // Agregar "Esc" y el carácter especial al contenedor
-                specialContainer.appendChild(escElement);
-                specialContainer.appendChild(charElement);
-                
-                // Agregar el contenedor al contenedor principal
-                container.appendChild(specialContainer);
+            // Verificar el carácter actual
+            const currentChar = value[i];
 
-                // Incrementar el contador de caracteres en 2
-                actualCharCount += 2;
-            } else {
-                // Agregar el carácter normal directamente al contenedor principal
-                container.appendChild(charElement);
+            // Determinar la clase de fondo predeterminada
+            let backgroundClass = 'bg-default';
 
-                // Incrementar el contador de caracteres en 1
-                actualCharCount += 1;
+            // Verificar si el carácter es especial
+            if (specialChars.includes(currentChar)) {
+                // Si estamos en 7 bits, agregar "Esc" antes del carácter especial
+                if (!isUnicode) {
+                    const escElement = document.createElement('span');
+                    escElement.textContent = 'Esc';
+                    escElement.classList.add('esc-text', 'bg-yellow');
+                    container.appendChild(escElement);
+                }
+                // Si es un carácter especial y estamos en Unicode, cambiar a bg-greenLight
+                if (isUnicode) {
+                    backgroundClass = 'bg-greenLight';
+                }
+            } else if (unicodeChars.includes(currentChar)) {
+                // Si es un carácter Unicode, aplicar bg-green
+                backgroundClass = 'bg-green';
+                isUnicode = true; // Marcar que estamos en Unicode
+            } else if (isUnicode) {
+                // Si estamos en Unicode y no es un carácter especial, aplicar bg-greenLight
+                backgroundClass = 'bg-greenLight';
             }
+
+            // Aplicar la clase de fondo al elemento de carácter
+            charElement.classList.add(backgroundClass);
+            charElement.textContent = currentChar;
+
+            // Agregar el elemento de carácter al contenedor
+            container.appendChild(charElement);
+
+            // Incrementar el contador de caracteres
+            actualCharCount++;
         }
 
         // Calcular el número de mensajes basado en el número de caracteres
-        const messageCount = Math.floor(actualCharCount / 160) + 1;
+        let maxCaracteres = isUnicode ? 70 : 160;
+        const messageCount = Math.ceil(actualCharCount / maxCaracteres);
 
-        // Actualizar el contador de caracteres y el número de partes del mensaje
+        // Actualizar los elementos de información
         contador.textContent = actualCharCount;
         partesMensaje.textContent = messageCount;
-    });
+        codificacion.textContent = isUnicode ? 'Unicode' : '7-bit';
+        caracteresMaximos.textContent = maxCaracteres;
 
-    // Funcionalidad del sticky header
-    const header = document.getElementById('header');
-    const sticky = header.offsetTop;
+        // Verificar y cambiar los caracteres anteriores con bg-yellow y bg-default a bg-greenLight si es Unicode
+        if (isUnicode) {
+            const charElements = container.querySelectorAll('.char.bg-yellow, .char.bg-default');
+            charElements.forEach(charElement => {
+                charElement.classList.remove('bg-yellow', 'bg-default');
+                charElement.classList.add('bg-greenLight');
+            });
 
-    function checkSticky() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
+            // Eliminar el elemento Esc si la codificación cambió a Unicode
+            const escElements = container.querySelectorAll('.esc-text');
+            escElements.forEach(escElement => {
+                escElement.remove();
+            });
         }
-    }
-
-    window.onscroll = function() {
-        checkSticky();
-    };
-
-
+    });
 });

@@ -159,7 +159,7 @@ header {
     left: 0;
     width: 100%;
     color: #444;
-    background-color: #fdfdfd; /* Color que cambia al hacer scroll */
+    background-color: #fffdf3; /* Color que cambia al hacer scroll */
     z-index: 1000;
     box-shadow: rgba(0,0,0,0.1) 0px 2px 4px 0; /* Sombra más transparente y menos extensa */
 }
@@ -190,7 +190,8 @@ footer {
 
 nav.navbar {
     display: flex;
-    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 100px;
 }
 
 nav.navbar ul {
@@ -202,8 +203,22 @@ nav.navbar ul {
 nav.navbar ul li {
     list-style: none;
     font-family: var(--font-family-primary);
-    margin-left: 10px;
+    margin-left: 20px;
 }
+
+nav.navbar ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #555;
+}
+
+nav.navbar ul li a:hover {
+    color: steelblue;
+}
+
+
+
+
 
 /* button demo  */
 
@@ -232,13 +247,12 @@ nav.navbar ul li {
 
 
 .logo-content {
-   
+    display: flex;
 }
 
 .logo-nav {
     display: flex;
     align-items: center;
-
     justify-content: space-between;
 }
 
@@ -252,7 +266,11 @@ nav.navbar ul li {
     font-weight: 600;
     font-size: 24px;
     margin-left: 10px;
+    margin-top: 0px;
+}
 
+.text-shadow-logo {
+    text-shadow: 1px 1px 0 rgb(218, 246, 255), -1px -1px 0 rgba(168, 218, 233, 1);
 }
 
 /* ================ app ====== content  =========================================== */

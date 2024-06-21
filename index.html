@@ -10,108 +10,105 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- js -->
     <script defer src="main.js"></script>
+    <script defer src="siteElements.js"></script>
     <title>Mostrar input en div</title>
-    
 </head>
 <body>
     <header id="header">
-
         <div class="container-center">
             <div class="top-buttons"></div>
             <div class="content-nav-logo">
-            <div class="logo-content">
-                <div class="logo-nav">
-                    <img src="logo.png" />
-                    <span class="logo-text">SMS Gateway</span>
+                <div class="logo-content">
+                    <div class="logo-nav">
+                        <img src="logo.png" />
+                        <span class="logo-text text-shadow-logo" id="logoText">SMS Gateway</span>
+                    </div>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Productos</a></li>
+                            <li><a href="">Precios</a></li>
+                            <li><a href="">Documentacion</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-
-                <nav class="navbar">
-                    <ul>
-                        <li>Home</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>
-                    </ul>
-                </nav>
+             
                 <div class="button-demo"><button class="btn-demo">Obtener demo</button></div>
             </div>
         </div>
-
     </header>
 
     <div class="container-fluid main-wrapper">
         <div class="container-center box-center box-shadow bg-white">
-    <h2 class="main-title">Insertar Contenido del Mensaje</h2>
-    
-    <div class="content-sms">
-        <div class="content-sms-writer">
-            <textarea id="miInput" class="input-text-sms" placeholder="Escribe aquí el contenido de tu mensaje...."></textarea>
-        </div>
-        <div class="content-sms-info">
-            <div class="grid-container-sms-info">
-                <div class="grid-item">Codificación:</div>
-                <div class="grid-item">7bit</div>
-                <div class="grid-item">SMS Partes</div>
-                <div class="grid-item"> <div id="partesMensaje">1</div></div>
-                <div class="grid-item">Caracteres usados</div>
-                <div class="grid-item"><div id="contador">0</div></div>
-                <div class="grid-item">Caracteres máximos</div>
-                <div class="grid-item">160</div>
-            </div> 
-        </div>
-
-    </div><!-- content-sms -->
-
-    <hr>
-    <section class="section-divider">
-        <h2 class="main-title">Detalle del SMS</h2>
-        <div id="mensajeDefault" class="text-default">Tu mensaje aparecera aquí!.</div>
-        <div id="miDiv" class="content"></div>
-    </section>
-
-    <section class="pt-15 section-divider">
-    <hr class="">
-        <h2 class="main-title">Guía de referencias</h2>
-        <div class="content-info">
-            <ul class="list-info">
-                <li>
-                    <span class="box-char bg-default"></span>
-                    <span class="text-box">Regular 7bit caracteres</span>
-                </li>
-                <li>
-                    <span class="box-char bg-yellow">Esc</span>
-                    <span class="text-box">carácter 0x1B; requerido para acceder a los caracteres
-                        <span class="box-char bg-default">|</span>
-                        <span class="box-char bg-default">^</span>
-                        <span class="box-char bg-default">€</span>
-                        <span class="box-char bg-default">{</span>
-                        <span class="box-char bg-default">}</span>
-                        <span class="box-char bg-default">[</span>
-                        <span class="box-char bg-default">]</span>
-                        <span class="box-char bg-default">~</span>
-                    </span>
-                </li>
-                <li>
-                    <span class="box-char bg-default">&nbsp;</span>
-                    <span class="text-box">Encabezado Definido por el Usuario (UDH) del mensaje. Requerido para SMS multipartes </span>
-                </li>
-                <li>
-                    <span class="box-char bg-greenLight">&nbsp;</span>
-                    <span class="text-box">Carácter presente en el conjunto de caracteres GSM, codificado como carácter Unicode</span>
-                </li>
-                <li>
-                    <span class="box-char bg-green">&nbsp;</span>
-                    <span class="text-box">No presente en el conjunto de caracteres GSM, obliga a usar codificación Unicode</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    </div><!-- container -->
-</div><!-- container fluid -->
-
-<footer>
-
-</footer>
-
-</body>
-</html>
+            <h2 class="main-title">Insertar Contenido del Mensaje</h2>
+            <div class="content-sms">
+                <div class="content-sms-writer">
+                    <textarea id="miInput" class="input-text-sms" placeholder="Escribe aquí el contenido de tu mensaje...."></textarea>
+                </div>
+                <div class="content-sms-info">
+                    <div class="grid-container-sms-info">
+                        <div class="grid-item">Codificación:</div>
+                        <div class="grid-item" id="codificacion">7bit</div>
+                        <div class="grid-item">SMS Partes</div>
+                        <div class="grid-item"><div id="partesMensaje">1</div></div>
+                        <div class="grid-item">Caracteres usados</div>
+                        <div class="grid-item"><div id="contador">0</div></div>
+                        <div class="grid-item">Caracteres máximos</div>
+                        <div class="grid-item" id="caracteresMaximos">160</div>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <section class="section-divider">
+                <h2 class="main-title">Detalle del SMS</h2>
+                <div id="mensajeDefault" class="text-default">Tu mensaje aparecera aquí!.</div>
+                <div id="miDiv" class="content"></div>
+            </section>
+            <section class="pt-15 section-divider">
+                <hr>
+                <h2 class="main-title">Guía de referencias</h2>
+                <div class="content-info">
+                    <ul class="list-info">
+                        <li>
+                            <span class="box-char bg-default"></span>
+                            <span class="text-box">Regular 7bit caracteres</span>
+                        </li>
+                        <li>
+                            <span class="box-char bg-yellow">Esc</span>
+                            <span class="text-box">carácter 0x1B; requerido para acceder a los caracteres
+                                <span class="box-char bg-default">|</span>
+                                <span class="box-char bg-default">^</span>
+                                <span class="box-char bg-default">€</span>
+                                <span class="box-char bg-default">{</span>
+                                <span class="box-char bg-default">}</span>
+                                <span class="box-char bg-default">[</span>
+                                <span class="box-char bg-default">]</span>
+                                <span class="box-char bg-default">~</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="box-char bg-default">&nbsp;</span>
+                            <span class="text-box">Encabezado Definido por el Usuario (UDH) del mensaje. Requerido para SMS multipartes </span>
+                        </li>
+                        <li>
+                            <span class="box-char bg-greenLight">&nbsp;</span>
+                            <span class="text-box">Carácter presente en el conjunto de caracteres GSM, codificado como carácter Unicode</span>
+                        </li>
+                        <li>
+                            <span class="box-char bg-green"></span>
+                            <span class="text-box">No presente en el conjunto de caracteres GSM, obliga a usar codificación Unicode</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            </div><!-- container -->
+        </div><!-- container fluid -->
+        
+        <footer>
+        
+        </footer>
+        
+        </body>
+        </html>
+                           
