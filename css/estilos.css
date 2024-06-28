@@ -21,6 +21,11 @@ body {
 
     header {
         height: 100px !important;
+        /*background-color: red;*/
+    }
+
+    .container-center {
+        width: 80% !important;
     }
     
     h2.main-title {
@@ -40,7 +45,9 @@ body {
     }
 
     .container-center {
-        width: 90% !important;
+        width: 100% !important;
+       /* background-color: #fb9e9e !important;*/
+        padding: 0 !important;
     }
 
     .input-text-sms {
@@ -57,20 +64,27 @@ body {
 
 @media (769px <= width <= 1020px) {
     .container-center {
-        width: 90%;
+        width: 94% !important;
+      
+        /*background-color: #571987 !important;*/
     } 
+    .ds-block {display: none !important}
 }
 
 @media (1021px <= width) {
     .container-center {
-        width:940px !important;
+        width:920px !important;
     }
+
+    .ds-block {display: none !important;}
 }
 
 @media (1177px <= width) {
     .container-center {
         width: 1177px !important;
     }
+
+    .ds-block {display: none !important;}
 }
 
 /*   variables */
@@ -87,7 +101,7 @@ body {
     --bg-color-gradientes-primary: linear-gradient(180deg, rgba(107, 201, 204, 1) 11%, rgba(252, 200, 246, 1) 39%, rgba(255, 255, 255, 0) 100%);
     --bg-color-gradientes-secondary: linear-gradient(to bottom, #d2e2da, #ffffff);
     --bg-color-gradientes-tertiary: linear-gradient(180deg, rgba(235, 135, 223, 1) 0%, rgba(129, 219, 222, 1) 25%, rgba(255, 255, 255, 0) 100%);
-    --bg-color-gradientes-cuarto: linear-gradient(180deg, rgba(29, 71, 107, 1) 0%, rgba(91, 189, 172, 1) 25%, rgba(255, 255, 255, 0) 100%);
+    --bg-color-gradientes-cuarto: linear-gradient(180deg, hsl(208, 57%, 27%) 0%, rgb(47, 94, 86) 25%, rgba(255, 255, 255, 0) 100%);
     --bg-color-gradientes-quinto:linear-gradient(180deg, rgba(245,226,219,1) 7%, rgba(240,223,246,1) 21%, rgba(255,255,255,1) 100%);
     --bg-color-gradientes-sexto: linear-gradient(180deg, rgba(168,218,233,1) 7%, rgba(247,239,192,1) 21%, rgba(246,211,244,1) 100%);
 }
@@ -104,10 +118,8 @@ body {
     background-color: var(--bg-white);
 }
 
-
 body {
-   
-    background:var(--bg-color-gradientes-sexto)
+   background-color: #06283d;
 }
 
 .container-fluid {
@@ -126,7 +138,7 @@ body {
 }
 
 .container-center.box-shadow {
-    box-shadow: rgb(196,225,241) 0 10px 25px 0;
+    /*box-shadow: rgb(196,225,241) 0 10px 25px 0;*/
 }
 
 /* font */
@@ -213,7 +225,7 @@ h1 {
 section.center-text p {
     text-align: center;
     font-family: var(--font-family-primary);
-    color: #555;
+    color: #cecece;
     font-weight: 500;
     font-size: 24px;
     margin-top: 30px;
@@ -221,11 +233,11 @@ section.center-text p {
 
 /* ===== ======header elements ======== ====== */
 
-
 .content-nav-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /*background-color: #571987;*/
 }
 
 nav.navbar {
@@ -249,15 +261,12 @@ nav.navbar ul li {
 nav.navbar ul li a {
     font-size: 15px;
     text-decoration: none;
-    color: #555;
+    color: #ffffff;
 }
 
 nav.navbar ul li a:hover {
     color: steelblue;
 }
-
-
-
 
 
 /* button demo  */
@@ -270,6 +279,7 @@ nav.navbar ul li a:hover {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
+    margin-top: 10px;
 	font-family:Arial;
 	font-size:16px;
 	padding:12px 14px;
@@ -290,6 +300,10 @@ nav.navbar ul li a:hover {
 
 .logo-content {
     display: flex;
+    /*background-color: #5f7d2d;*/
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
 }
 
 .logo-nav {
@@ -517,5 +531,73 @@ background-color: #ebebeb;
 
 
 
+/* =================================================================*/
 
 
+.menu-icon {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: rgb(48, 48, 48);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 940px) {
+    .menu {
+        background-color: rgb(72, 90, 163);
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .menu.show {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    
+
+    .ds-block {display: block;}
+}
