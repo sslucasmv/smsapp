@@ -29,8 +29,8 @@ body {
     }
     
     h2.main-title {
-        margin-bottom: 15px !important;
-        font-size: 20px !important;
+        margin-bottom: 5px !important;
+        font-size: 18px !important;
     }
 
     .content-sms {
@@ -69,7 +69,7 @@ body {
       
         /*background-color: #571987 !important;*/
     } 
-    .ds-block {display: none !important}
+    
 }
 
 @media (1021px <= width) {
@@ -77,16 +77,16 @@ body {
         width:920px !important;
     }
 
-    .ds-block {display: none !important;}
+  
 }
 
 @media (1177px <= width) {
     .container-center {
-        width: 1157px !important;
+        width: 1177px !important;
     }
 
     .container-center-header {
-        width: 1167px !important;
+        width: 1177px !important;
         margin: 0 auto !important;
     }
 
@@ -139,7 +139,7 @@ body {
 }
 
 .pt20 {
-    padding: 20px;
+    padding:20px 0;
 }
 
 .container-center.box-center {
@@ -216,8 +216,8 @@ section.center-text p {
     text-align: left;
     font-family: var(--font-family-primary);
     color: #333;
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 200;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 0;
@@ -425,13 +425,13 @@ hr {
 
 .grid-container-sms-info {
     display: grid;
-    background-color:#e2eef7;/*#ebf7ff;*/
+    background-color:#184969;/*#e2eef7;/*#ebf7ff;*/
     grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
     grid-template-rows: repeat(4, auto); /* 4 filas que ajustan su altura automáticamente */
     padding: 0px 0px;
     border-collapse: collapse;
     border-radius: 6px;
-    color: #444;
+    color: #fff;
 }
 
 .grid-item {
@@ -442,7 +442,7 @@ hr {
     font-family: var(--primary-font);
     font-size: 16px;
     font-weight: 600;
-    border:1px solid rgba(45, 153, 216, 0.5);
+    border:1px solid #ffffff;
     border-width: 0 0px 1px 0; /* Borde inferior y derecho */
   }
 
