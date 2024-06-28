@@ -48,6 +48,7 @@ body {
         width: 100% !important;
        /* background-color: #fb9e9e !important;*/
         padding: 0 !important;
+        margin: 0;
     }
 
     .input-text-sms {
@@ -81,8 +82,16 @@ body {
 
 @media (1177px <= width) {
     .container-center {
-        width: 1177px !important;
+        width: 1157px !important;
     }
+
+    .container-center-header {
+        width: 1167px !important;
+        margin: 0 auto !important;
+    }
+
+
+
 
     .ds-block {display: none !important;}
 }
@@ -106,9 +115,7 @@ body {
     --bg-color-gradientes-sexto: linear-gradient(180deg, rgba(168,218,233,1) 7%, rgba(247,239,192,1) 21%, rgba(246,211,244,1) 100%);
 }
 
-
 /*  --- --- --- --- */
-
 
 .pt-15 {
     padding-top: 15px;
@@ -119,7 +126,7 @@ body {
 }
 
 body {
-   background-color: #06283d;
+   background-color: #fff;
 }
 
 .container-fluid {
@@ -129,12 +136,15 @@ body {
 .container-center {
     /*width: 1177px;*/
     margin:0 auto;
+}
+
+.pt20 {
     padding: 20px;
 }
 
 .container-center.box-center {
     border:1px solid #ccc;
-    border-radius:12px;
+   
 }
 
 .container-center.box-shadow {
@@ -161,19 +171,7 @@ header {
     text-align: center;
     width: 100%;
     height: auto;
-    transition: background-color 0.4s;  
-}
-
-/* Estilos sticky */
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #444;
-    background-color: #fffdf3; /* Color que cambia al hacer scroll */
-    z-index: 1000;
-    box-shadow: rgba(0,0,0,0.1) 0px 2px 4px 0; /* Sombra más transparente y menos extensa */
+    background-color: #06283d; ;  
 }
 
 footer {
@@ -183,7 +181,7 @@ footer {
 }
 
 .main-wrapper {
-    margin-top: 80px !important;
+    margin-top: 30px !important;
 }
 
 .section-divider {
@@ -194,41 +192,36 @@ footer {
 section.center-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 60px;
+    justify-content: left;
+    text-align: left;
+    width: 1197px;
+    margin: 0   auto;
+    padding-top: 30px;
 }
 
 h1 {
     font-family: var(--font-family-primary);
-    font-size: 36px;
+    font-size: 30px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 15px;
 }
 
 .linear-wipe {
-    text-align: center;
-    background: linear-gradient(to right, hsl(188, 66%, 44%) 20%, #bc0cf1 40%, #f47878 60%, steelblue 80%);
-    background-size: 200% auto;
-    color: #000;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    animation: shine 4s linear infinite;
+    text-align: left;
+    color: #333;
 }
-
-@keyframes shine {
-    to {
-        background-position: 100% center;
-    }
-}
-
 
 section.center-text p {
-    text-align: center;
+    text-align: left;
     font-family: var(--font-family-primary);
-    color: #cecece;
+    color: #333;
     font-weight: 500;
-    font-size: 24px;
-    margin-top: 30px;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /* ===== ======header elements ======== ====== */
@@ -271,27 +264,24 @@ nav.navbar ul li a:hover {
 
 /* button demo  */
 .btn-demo {
-	box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-	background-color:#dfbdfa;
-	border-radius:28px;
-	border:1px solid #c584f3;
+	background-color:#353ee5;
+	border-radius:10px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-    margin-top: 10px;
+    margin-top: 16px;
 	font-family:Arial;
 	font-size:16px;
 	padding:12px 14px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #9752cc;
+    border: 1px solid #7f85f0;
 }
-.btn-demo:hover {
-    box-shadow:inset 0px 1px 0px 0px #c19fd6;
-    background:linear-gradient(to bottom, #bc80ea 100%, #bc80ea 100%);
-    border:1px solid #b779e3;
 
+.btn-demo:hover { 
+    background-color:#2830b9;
 }
+
 .btn-demo:active {
 	position:relative;
 	top:1px;
@@ -314,7 +304,6 @@ nav.navbar ul li a:hover {
 
 .logo-nav img {
     width: 250px;
- 
 }
 
 .logo-text {
@@ -325,9 +314,6 @@ nav.navbar ul li a:hover {
     margin-top: 0px;
 }
 
-.text-shadow-logo {
-    text-shadow: 1px 1px 0 rgb(218, 246, 255), -1px -1px 0 rgba(168, 218, 233, 1);
-}
 
 /* ================ app ====== content  =========================================== */
 
@@ -563,8 +549,6 @@ background-color: #ebebeb;
     background-color: #555;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 940px) {
     .menu {
@@ -596,8 +580,6 @@ background-color: #ebebeb;
     .menu-icon {
         display: block;
     }
-
-    
 
     .ds-block {display: block;}
 }
