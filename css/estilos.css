@@ -1,177 +1,57 @@
+
+/* variables definidas */ 
+
+:root {
+    --font-size16: 16px;
+    --font-weight-primary: 600;
+    --font-family-primary: "Inter", sans-serif;
+    --bg-body-color:#fff;
+    --bg-primary-color:#06283d;
+}
+
+/*  reset */
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    background:var(--bg-body-color);
+    font-family: var(--font-family-primary);
 }
 
-  /* MEDIAS QUERIES */
-  /* medidas 
-
-  smarthphone 320 - 480
-  Tablet - 768 - 1024
-  Desktops - 1024 > 1680
-
-  */
-
-  @media (320px <= width <= 600px ){
-
-    header {
-        height: 100px !important;
-        /*background-color: red;*/
-    }
-
-    .container-center {
-        width: 80% !important;
-    }
-    
-    h2.main-title {
-        margin-bottom: 5px !important;
-        font-size: 18px !important;
-    }
-
-    .content-sms {
-        width: 94% !important;
-        flex-direction: column !important; 
-    }
-
-    .content-sms-writer , .content-sms-info {
-        width: 100% !important;
-        padding: 0 !important; 
-        margin:0 auto !important;      
-    }
-
-    .container-center {
-        width: 100% !important;
-       /* background-color: #fb9e9e !important;*/
-        padding: 0 !important;
-        margin: 0;
-    }
-
-    .input-text-sms {
-    min-height: 80px !important;
-  }
-
-  .grid-item {
-    padding: 4px 0 !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-  }
-
+.mt-20 {
+    padding-top:30px;
 }
 
-@media (769px <= width <= 1020px) {
-    .container-center {
-        width: 94% !important;
-      
-        /*background-color: #571987 !important;*/
-    } 
-    
-}
+/*
 
-@media (1021px <= width) {
-    .container-center {
-        width:920px !important;
-    }
+ mobile firs 
+ hacer todo para pantalla mobile 
+ 
+ usar media queries para pantallas escritorio
 
-  
-}
+*/
 
-@media (1177px <= width) {
-    .container-center {
-        width: 1177px !important;
-    }
+/* mobile first */
 
-    .container-center-header {
-        width: 1177px !important;
-        margin: 0 auto !important;
-    }
-
-
-
-
-    .ds-block {display: none !important;}
-}
-
-/*   variables */
-
-
-:root {
-    --font-size16: 16px;
-    --font-weight-primary: 600;
-    --font-family-primary: "Inter", sans-serif;
-    --font-optical-sizing: auto;
-    --font-style: normal;
-    --font-variation-settings:"slnt" 0;
-    --bg-white:#fff;
-    --bg-color-gradientes-primary: linear-gradient(180deg, rgba(107, 201, 204, 1) 11%, rgba(252, 200, 246, 1) 39%, rgba(255, 255, 255, 0) 100%);
-    --bg-color-gradientes-secondary: linear-gradient(to bottom, #d2e2da, #ffffff);
-    --bg-color-gradientes-tertiary: linear-gradient(180deg, rgba(235, 135, 223, 1) 0%, rgba(129, 219, 222, 1) 25%, rgba(255, 255, 255, 0) 100%);
-    --bg-color-gradientes-cuarto: linear-gradient(180deg, hsl(208, 57%, 27%) 0%, rgb(47, 94, 86) 25%, rgba(255, 255, 255, 0) 100%);
-    --bg-color-gradientes-quinto:linear-gradient(180deg, rgba(245,226,219,1) 7%, rgba(240,223,246,1) 21%, rgba(255,255,255,1) 100%);
-    --bg-color-gradientes-sexto: linear-gradient(180deg, rgba(168,218,233,1) 7%, rgba(247,239,192,1) 21%, rgba(246,211,244,1) 100%);
-}
-
-/*  --- --- --- --- */
-
-.pt-15 {
-    padding-top: 15px;
-}
-
-.bg-white {
-    background-color: var(--bg-white);
-}
-
-body {
-   background-color: #fff;
-}
-
-.container-fluid {
-    width: 100%;
-}
-
-.container-center {
-    /*width: 1177px;*/
-    margin:0 auto;
-}
-
-.pt20 {
-    padding:20px 0;
-}
-
-.container-center.box-center {
-    border:1px solid #ccc;
-   
-}
-
-.container-center.box-shadow {
-    /*box-shadow: rgb(196,225,241) 0 10px 25px 0;*/
-}
-
-/* font */
-
-.inter {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
-}
 
 /* layouts */
 /* estilos.css */
 
 /* Estilos generales para el header */
+
+
+
+/*  layouts */
+
 header {
     color:#444;
     text-align: center;
     width: 100%;
-    height: auto;
-    background-color: #06283d; ;  
+    height:80px;
+    background:var(--bg-primary-color)  
 }
 
 footer {
@@ -182,6 +62,7 @@ footer {
 
 .main-wrapper {
     margin-top: 30px !important;
+    padding-top: 20px;
 }
 
 .section-divider {
@@ -189,42 +70,31 @@ footer {
     padding-bottom: 30px;
 }
 
-section.center-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    text-align: left;
-    width: 1197px;
-    margin: 0   auto;
-    padding-top: 30px;
-}
 
-h1 {
-    font-family: var(--font-family-primary);
+h1.main-title {
     font-size: 30px;
     padding-left: 0;
     margin-left: 0;
     margin-top: 15px;
-}
-
-.linear-wipe {
-    text-align: left;
     color: #333;
+    padding: 0;
 }
 
-section.center-text p {
+
+ p.text-paragraph{
     text-align: left;
-    font-family: var(--font-family-primary);
     color: #333;
     font-weight: 200;
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 10px;
-    margin-left: 0;
-    padding-left: 0;
 }
 
 /* ===== ======header elements ======== ====== */
+
+
+
+/*  nav bar */
 
 .content-nav-logo {
     display: flex;
@@ -240,8 +110,6 @@ nav.navbar {
 }
 
 nav.navbar ul {
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -261,9 +129,11 @@ nav.navbar ul li a:hover {
     color: steelblue;
 }
 
+/*  end content nav bar */
 
-/* button demo  */
-.btn-demo {
+/* link boton   */
+a.btn-demo {
+    display: block;
 	background-color:#353ee5;
 	border-radius:10px;
 	display:inline-block;
@@ -278,19 +148,12 @@ nav.navbar ul li a:hover {
     border: 1px solid #7f85f0;
 }
 
-.btn-demo:hover { 
+a.btn-demo:hover { 
     background-color:#2830b9;
 }
 
-.btn-demo:active {
-	position:relative;
-	top:1px;
-}
-
-
 .logo-content {
     display: flex;
-    /*background-color: #5f7d2d;*/
     width: 100%;
     height: 80px;
     justify-content: space-between;
@@ -315,7 +178,7 @@ nav.navbar ul li a:hover {
 }
 
 
-/* ================ app ====== content  =========================================== */
+/* css Aplicacion - calculadora SMS */
 
 .content {
     display: flex;
@@ -352,10 +215,6 @@ nav.navbar ul li a:hover {
     margin-bottom: 10px;
 }
 
-.mt-20 {
-    margin-top: 20px;
-}
-
 .content-sms {
     width: 100%;
     display: flex;
@@ -370,8 +229,7 @@ nav.navbar ul li a:hover {
     flex-direction: column;   
 }
 
-h2.main-title {
-    font-family: var(--font-family-primary);
+h2.sub-title {
     font-weight: var(--font-weight-primary);
     font-size: 24px;
     color: #555;
@@ -384,7 +242,6 @@ hr {
 }
 
 .text-default {
-    font-family: var(--font-family-primary);
     font-size: 16px;
 }
 
@@ -397,15 +254,15 @@ hr {
     border:1px solid #ccc;
     border-radius:14px;
     outline: none;
-    font-family: var(--font-family-primary);
-    font-weight:400;
     font-size: 16px;
     color: #444;
     margin-bottom: 20px;
+    font-family: var(--font-family-primary);
+    font-weight: 400;
 }
 
 .input-text-sms:focus {
-    background-color: #f5fffa/*fffaf4;*/
+    background-color: #f5fffa;
     
 }
 
@@ -417,7 +274,7 @@ hr {
    border-top-right-radius: 8px;
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 8px;
-   padding:0px 0 0 0; 
+   padding:0; 
    font-family: var(--font-family-primary);
 }
 
@@ -425,10 +282,10 @@ hr {
 
 .grid-container-sms-info {
     display: grid;
-    background-color:#184969;/*#e2eef7;/*#ebf7ff;*/
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
-    grid-template-rows: repeat(4, auto); /* 4 filas que ajustan su altura automáticamente */
-    padding: 0px 0px;
+    background-color:#184969;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(4, auto); 
+    padding:0;
     border-collapse: collapse;
     border-radius: 6px;
     color: #fff;
@@ -443,15 +300,14 @@ hr {
     font-size: 16px;
     font-weight: 600;
     border:1px solid #ffffff;
-    border-width: 0 0px 1px 0; /* Borde inferior y derecho */
+    border-width: 0 0px 1px 0;
   }
 
-   /* Remover el borde inferior del último elemento de cada columna */
+
    .grid-item:nth-last-child(-n+2) {
     border-bottom: 0;
   }
 
-  /* Remover el borde derecho de los elementos de la última columna */
   .grid-item:nth-child(2n) {
     border-right: 0;
   }
@@ -478,6 +334,8 @@ hr {
     flex-direction: row;
     align-items: center;
 }
+
+/* lista refencia  */
 
 span.box-char {
     display: inline-block;
@@ -514,72 +372,75 @@ background-color: #ebebeb;
     background-color:#5f7d2d;
 }
 
+/*  media query */
 
 
 
-/* =================================================================*/
+  @media (320px <= width <= 600px ){
 
+    .container-center {
+    max-width:98%;
+    margin:0 auto;
+    }
+    
+    h2.main-title {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
 
-.menu-icon {
-    display: none;
-    font-size: 36px;
-    cursor: pointer;
-    color: rgb(48, 48, 48);
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-}
-
-.menu li {
-    display: inline;
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-
-.menu a:hover {
-    background-color: #555;
-}
-
-/* Responsive Design */
-@media (max-width: 940px) {
-    .menu {
-        background-color: rgb(72, 90, 163);
-        height: 100vh;
-        width: 100%;
-        max-width: 100%;
-        position: fixed;
-        top: 100px;
-        right: 0;
-        display: flex;
+    .content-sms {
+        width: 94%;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 3rem;
-        transform: translateX(100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     }
 
-    .menu.show {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
+    .content-sms-writer , .content-sms-info {
+        width: 100%;
+        padding: 0;
+        margin:0 auto;    
     }
 
-    .menu-icon {
-        display: block;
+    .container-center {
+        width: 100% !important;
     }
 
-    .ds-block {display: block;}
+    .input-text-sms {
+    min-height: 80px;
+  }
+
+  .grid-item {
+    padding: 4px 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
 }
+
+@media (769px <= width <= 1020px) {
+    .container-center {
+        max-width: 96%;
+        margin: 0 auto;
+    } 
+    
+}
+
+@media (1021px <= width) {
+    .container-center {
+        max-width:920px;
+        margin: 0 auto;
+    }
+
+  
+}
+
+@media (1177px <= width) {
+    .container-center {
+        max-width: 1177px;
+    }
+
+    .container-center-header {
+        width: 1177px ;
+        margin: 0 auto;
+    }
+
+}
+
