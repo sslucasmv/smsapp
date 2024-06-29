@@ -155,7 +155,9 @@ a.btn-demo {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #9752cc;
     border: 1px solid #7f85f0;
+    margin-top: 16px;
 }
+
 
 a.btn-demo:hover { 
     background-color:#2830b9;
@@ -388,9 +390,7 @@ background-color: #ebebeb;
     margin:0 auto;
     }
 
-    .container-center-header {
-        flex-direction: column;
-    }
+  
     
     h2.main-title {
         margin-bottom: 5px;
@@ -434,24 +434,6 @@ background-color: #ebebeb;
     justify-content: center;
 }
 
-  .button-demo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #ddd;
-
-}
-
-.button-p {
-    margin-top: 15px;
-}
-
-}
-
-@media (500px <= width ){
-
-    .button-p {display: none;}
-
 }
 
 
@@ -460,7 +442,7 @@ background-color: #ebebeb;
         max-width: 96%;
         margin: 0 auto;
     } 
-    .button-p {display: none;}
+  
 }
 
 @media (1021px <= width) {
@@ -469,7 +451,7 @@ background-color: #ebebeb;
         margin: 0 auto;
     }
 
-    .button-p {display: none;}
+   
 }
 
 @media (1177px <= width) {
@@ -482,7 +464,6 @@ background-color: #ebebeb;
         margin: 0 auto;
     }
 
-    .button-p {display: none;}
 
 }
 
