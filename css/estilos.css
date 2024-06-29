@@ -388,6 +388,8 @@ background-color: #ebebeb;
         font-size: 18px;
     }
 
+    .btn-demo {display: none;}
+
     .content-sms {
         width: 94%;
         flex-direction: column;
