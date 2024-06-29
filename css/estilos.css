@@ -50,9 +50,16 @@ header {
     color:#444;
     text-align: center;
     width: 100%;
-    height:80px;
     background:var(--bg-primary-color)  
 }
+
+.container-center-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-img 
 
 footer {
     width: 100%;
@@ -131,6 +138,9 @@ nav.navbar ul li a:hover {
 
 /*  end content nav bar */
 
+
+
+
 /* link boton   */
 a.btn-demo {
     display: block;
@@ -139,7 +149,6 @@ a.btn-demo {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-    margin-top: 16px;
 	font-family:Arial;
 	font-size:16px;
 	padding:12px 14px;
@@ -152,22 +161,16 @@ a.btn-demo:hover {
     background-color:#2830b9;
 }
 
-.logo-content {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    justify-content: space-between;
-}
-
 .logo-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo-nav img {
+.logo-img {
     width: 250px;
 }
+
 
 .logo-text {
     font-family: var(--font-family-primary);
@@ -376,11 +379,17 @@ background-color: #ebebeb;
 
 
 
+
+
   @media (320px <= width <= 600px ){
 
     .container-center {
     max-width:98%;
     margin:0 auto;
+    }
+
+    .container-center-header {
+        flex-direction: column;
     }
     
     h2.main-title {
@@ -388,7 +397,7 @@ background-color: #ebebeb;
         font-size: 18px;
     }
 
-    .btn-demo {display: none;}
+ 
 
     .content-sms {
         width: 94%;
@@ -415,14 +424,45 @@ background-color: #ebebeb;
     font-weight: 400;
   }
 
+  header {
+    height: auto !important;
+  }
+
+.center {
+    padding: 5px;
+    display: flex;
 }
+
+  .button-demo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    background-color: #ccc;
+    padding:5px 0;
+
+}
+
+.button-p {
+    margin-top: 15px;
+}
+
+}
+
+@media (500px <= width ){
+
+    .button-p {display: none;}
+
+}
+
 
 @media (769px <= width <= 1020px) {
     .container-center {
         max-width: 96%;
         margin: 0 auto;
     } 
-    
+    .button-p {display: none;}
 }
 
 @media (1021px <= width) {
@@ -431,7 +471,7 @@ background-color: #ebebeb;
         margin: 0 auto;
     }
 
-  
+    .button-p {display: none;}
 }
 
 @media (1177px <= width) {
@@ -443,6 +483,8 @@ background-color: #ebebeb;
         width: 1177px ;
         margin: 0 auto;
     }
+
+    .button-p {display: none;}
 
 }
 
