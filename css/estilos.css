@@ -156,6 +156,7 @@ a.btn-demo {
 	text-shadow:0px 1px 0px #9752cc;
     border: 1px solid #7f85f0;
     margin-top: 16px;
+    margin-right: 10px;
 }
 
 
@@ -381,7 +382,9 @@ background-color: #ebebeb;
 
 
 
-
+@media (320px <= width <= 480px ){
+    a.btn-demo {display: none;}
+}
 
   @media (320px <= width <= 600px ){
 
@@ -390,6 +393,7 @@ background-color: #ebebeb;
     margin:0 auto;
     }
 
+   
   
     
     h2.main-title {
