@@ -45,15 +45,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 
                 // Si es un carácter especial y estamos en Unicode, cambiar a bg-greenLight
                 if (isUnicode) {
-                    backgroundClass = 'bg-greenLight';
+                    backgroundClass = 'bg-unicode';
                 }
             } else if (unicodeChars.includes(currentChar)) {
                 // Si es un carácter Unicode, aplicar bg-green
-                backgroundClass = 'bg-green';
+                backgroundClass = 'bg-special';
                 isUnicode = true; // Marcar que estamos en Unicode
             } else if (isUnicode) {
                 // Si estamos en Unicode y no es un carácter especial, aplicar bg-greenLight
-                backgroundClass = 'bg-greenLight';
+                backgroundClass = 'bg-unicode';
             }
 
             // Aplicar la clase de fondo al elemento de carácter
@@ -79,16 +79,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Verificar y cambiar los caracteres anteriores con bg-yellow y bg-default a bg-greenLight si es Unicode
         if (isUnicode) {
-            const charElements = container.querySelectorAll('.char.bg-yellow, .char.bg-default');
+            const charElements = container.querySelectorAll('.char.bg-default');
             charElements.forEach(charElement => {
-                charElement.classList.remove('bg-yellow', 'bg-default');
-                charElement.classList.add('bg-greenLight');
-            });
-
-            // Eliminar el elemento Esc si la codificación cambió a Unicode
-            const escElements = container.querySelectorAll('.esc-text');
-            escElements.forEach(escElement => {
-                escElement.remove();
+                charElement.classList.remove('bg-default');
+                charElement.classList.add('bg-unicode');
             });
         }
     });
