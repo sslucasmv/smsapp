@@ -1,6 +1,4 @@
-
 /* variables definidas */ 
-
 :root {
     --font-size16: 16px;
     --font-weight-primary: 600;
@@ -13,7 +11,6 @@
 }
 
 /*  reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -24,31 +21,24 @@ body {
     font-family: var(--font-family-primary);
 }
 
-.mt-20 {
+.pt-30 {
     padding-top:30px;
 }
 
-/*
+.pt-20 {
+    padding-top: 20px;
+} 
 
- mobile firs 
- hacer todo para pantalla mobile 
- 
- usar media queries para pantallas escritorio
+.ptb-30 {
+    padding-top:30px;
+    padding-bottom: 30px;
+}
 
-*/
+.mt-30 {
+    margin-top: 30px;
+}
 
-/* mobile first */
-
-
-/* layouts */
-/* estilos.css */
-
-/* Estilos generales para el header */
-
-
-
-/*  layouts */
-
+/*  header */
 header {
     color:#444;
     text-align: center;
@@ -62,89 +52,11 @@ header {
     width: 100%;
 }
 
-.logo-img 
-
-footer {
-    width: 100%;
-    height: 200px;
-    display: flex;
+/* header elements */ 
+.logo-img {
+    width: 250px;
 }
 
-.main-wrapper {
-    margin-top: 30px !important;
-    padding-top: 20px;
-}
-
-.section-divider {
-    padding-top:30px;
-    padding-bottom: 30px;
-}
-
-
-h1.main-title {
-    font-size: 30px;
-    padding-left: 0;
-    margin-left: 0;
-    margin-top: 15px;
-    color: #333;
-    padding: 0;
-}
-
-
- p.text-paragraph{
-    text-align: left;
-    color: #333;
-    font-weight: 200;
-    font-size: 18px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-/* ===== ======header elements ======== ====== */
-
-
-
-/*  nav bar */
-
-.content-nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /*background-color: #571987;*/
-}
-
-nav.navbar {
-    display: flex;
-    margin-top: 24px;
-    margin-left: 100px;
-}
-
-nav.navbar ul {
-    display: flex;
-}
-
-nav.navbar ul li {
-    list-style: none;
-    font-family: var(--font-family-primary);
-    margin-left: 20px;
-}
-
-nav.navbar ul li a {
-    font-size: 15px;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-nav.navbar ul li a:hover {
-    color: steelblue;
-}
-
-/*  end content nav bar */
-
-
-
-
-/* link boton   */
 a.btn-demo {
     display: block;
 	background-color:#353ee5;
@@ -162,30 +74,52 @@ a.btn-demo {
     margin-right: 10px;
 }
 
-
 a.btn-demo:hover { 
     background-color:#2830b9;
 }
 
-.logo-nav {
+/*  footer */
+footer {
+    width: 100%;
+    height: 200px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.logo-img {
-    width: 250px;
+/* divisor  */
+hr {
+    margin-bottom: 15px;
+    border-top: 1px solid #ccc;
+}
+/*  titles, text */
+h1.main-title {
+    font-size: 30px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 15px;
+    color: #333;
+    padding: 0;
 }
 
-
-.logo-text {
-    font-family: var(--font-family-primary);
-    font-weight: 600;
+h2.sub-title {
+    font-weight: var(--font-weight-primary);
     font-size: 24px;
-    margin-left: 10px;
-    margin-top: 0px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
+ p.text-paragraph{
+    text-align: left;
+    color: #333;
+    font-weight: 200;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p.text-default {
+    font-size: 16px;
+    color:#666;
+}
 
 /* css Aplicacion - calculadora SMS */
 
@@ -238,24 +172,6 @@ a.btn-demo:hover {
     flex-direction: column;   
 }
 
-h2.sub-title {
-    font-weight: var(--font-weight-primary);
-    font-size: 24px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-hr {
-    margin-bottom: 15px;
-    border-top: 1px solid #ccc;
-}
-
-.text-default {
-    font-size: 16px;
-}
-
-/*  sms writer */
-
 .input-text-sms {
     width: 100%;
     min-height: 170px;
@@ -275,8 +191,6 @@ hr {
     
 }
 
-/*  fin sms writer */
-
 .content-sms-info {
    width: 35%;
    border-top-left-radius: 8px;
@@ -286,8 +200,6 @@ hr {
    padding:0; 
    font-family: var(--font-family-primary);
 }
-
-/* grid sms info  */
 
 .grid-container-sms-info {
     display: grid;
@@ -312,16 +224,15 @@ hr {
     border-width: 0 0px 1px 0;
   }
 
-
-   .grid-item:nth-last-child(-n+2) {
+.grid-item:nth-last-child(-n+2) {
     border-bottom: 0;
   }
 
-  .grid-item:nth-child(2n) {
+.grid-item:nth-child(2n) {
     border-right: 0;
   }
 
-/*  content info leyenda */
+/*  guia referencia */
 
 .content-info {
     width: 100%;
@@ -343,8 +254,6 @@ hr {
     flex-direction: row;
     align-items: center;
 }
-
-/* lista refencia  */
 
 span.box-char {
     display: inline-block;
@@ -375,7 +284,7 @@ background:var(--bg-yellow);
     color: #fff;
 }
 
-/*  media query */
+/*  media query  - responsive  */
 
 @media (320px <= width <= 480px ){
     a.btn-demo {
@@ -383,26 +292,20 @@ background:var(--bg-yellow);
     }
 }
 
-  @media (320px <= width <= 600px ){
-
+@media (320px <= width <= 600px ){
     .container-center {
-    max-width:98%;
-    margin:0 auto;
+        max-width:98%;
+        margin:0 auto;
     }
 
     .container-center-header {
         justify-content: center;
     }
 
-   
-  
-    
     h2.main-title {
         margin-bottom: 5px;
         font-size: 18px;
     }
-
- 
 
     .content-sms {
         width: 94%;
@@ -416,47 +319,43 @@ background:var(--bg-yellow);
     }
 
     .container-center {
-        width: 100% !important;
+        width: 100%;
     }
 
     .input-text-sms {
-    min-height: 80px;
-  }
+        min-height: 80px;
+    }
 
-  .grid-item {
-    padding: 4px 0;
-    font-size: 14px;
-    font-weight: 400;
-  }
+    .grid-item {
+        padding: 4px 0;
+        font-size: 14px;
+        font-weight: 400;
+    }
 
-  header {
-    height: auto !important;
-  }
+    header {
+        height: auto;
+    }
 
-.center {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
+    .center {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
 }
-
-}
-
 
 @media (769px <= width <= 1020px) {
     .container-center {
         max-width: 96%;
         margin: 0 auto;
     } 
-  
 }
 
 @media (1021px <= width) {
     .container-center {
         max-width:920px;
         margin: 0 auto;
-    }
-
-   
+    }  
 }
 
 @media (1177px <= width) {
@@ -468,7 +367,4 @@ background:var(--bg-yellow);
         width: 1177px ;
         margin: 0 auto;
     }
-
-
 }
-
