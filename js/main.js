@@ -42,12 +42,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Verificar si el carácter es especial
             if (specialChars.includes(currentChar)) {
                 // Si estamos en 7 bits, agregar "Esc" antes del carácter especial
-                if (!isUnicode) {
-                    const escElement = document.createElement('span');
-                    escElement.textContent = 'Esc';
-                    escElement.classList.add('esc-text', 'bg-yellow');
-                    container.appendChild(escElement);
-                }
+                
                 // Si es un carácter especial y estamos en Unicode, cambiar a bg-greenLight
                 if (isUnicode) {
                     backgroundClass = 'bg-greenLight';

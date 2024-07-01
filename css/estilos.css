@@ -351,7 +351,7 @@ span.box-char {
     padding:8px 6px;
     border-radius:4px ;
     text-align:center !important;
-    color:#444; 
+    color:#696969; 
 }
 
 span.text-box {
@@ -359,11 +359,11 @@ span.text-box {
 }
 
 .bg-default {
-background-color: #ebebeb;
+background-color:#ffd32e/*#ebebeb*/;
 }
 
 .bg-yellow {
-    background-color:#ffeca7;
+    background-color:#ffeca7; 
 }
 
 .bg-sky {
@@ -371,11 +371,13 @@ background-color: #ebebeb;
 }
 
 .bg-greenLight {
-    background-color:#85b13e;
+    background-color:#2D36E1;/*#85b13e*/
+    color: #fff;
 }
 
 .bg-green {
-    background-color:#5f7d2d;
+    background-color:#d816b4;
+    color: #fff;
 }
 
 /*  media query */
